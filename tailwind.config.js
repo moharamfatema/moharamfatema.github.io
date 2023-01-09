@@ -5,6 +5,17 @@ module.exports = {
     ],
     theme: {
         extend: {},
+        colors: {
+            primary: {
+                purple: '#303481',
+                yellow: '#FFF200',
+                dark: '#333156',
+            },
+            white: '#FFFFFF',
+        },
+        fontFamily: {
+            sans: ['Quicksand', 'sans-serif'],
+        }
     },
     plugins: [],
 }

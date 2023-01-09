@@ -1,10 +1,12 @@
 import React from 'react'
 import './App.css'
 
+import Home from './modules/Home'
+
 function App() {
     return (
         <div className="App">
-      App
+            <Home/>
         </div>
     )
 }
