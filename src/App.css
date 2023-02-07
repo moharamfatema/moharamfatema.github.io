@@ -1,5 +1,16 @@
 .App {
-
+  cursor: none;
   width: 100vw;
   height: 100vh;
+}
+#glowing{
+  /* setting from htnl style value */
+  --mouse-x: 50;
+  --mouse-y: 50;
+  @apply w-10 h-10 z-20 ;
+  @apply bg-gradient-to-bl from-purple-600 to-purple-100 rounded-full;
+  @apply shadow-lg shadow-purple-100;
+  position: absolute;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
 }

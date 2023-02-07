@@ -1,25 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  background-image: url('assets/Background.svg');
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: rgba(0,0,0, 0.5);
-  background-blend-mode: multiply;
+  @apply bg-gradient-to-bl  from-background-dark to-background-darker;
+  @apply text-purple-200;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.resume.link{
+  @apply text-purple-300;
+  @apply font-bold;
+}
+.resume.btn{
+  @apply rounded-xl;
+  @apply bg-background-dark p-4 ;
+  @apply drop-shadow-sm hover:drop-shadow-xl;
+
+}
+
+.website{
+  @apply w-[50%] h-auto rounded-md absolute top-[15vh] left-[10%] -z-10;
+}
+
+.name{
+  @apply text-center w-11;
+}
+
+.overview{
+  @apply w-[50%] h-auto relative left-[50%] top-[15vh];
 }
