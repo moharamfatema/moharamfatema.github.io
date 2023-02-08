@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  @apply bg-gradient-to-bl  from-background-dark to-background-darker;
+  @apply bg-background-dark;
   @apply text-purple-200;
 }
 
@@ -19,18 +19,18 @@ code {
 }
 
 .resume.link{
-  @apply text-purple-300;
+  @apply text-white;
   @apply font-bold;
 }
 .resume.btn{
   @apply rounded-xl;
-  @apply bg-background-dark p-4 ;
-  @apply drop-shadow-sm hover:drop-shadow-xl;
+  @apply bg-dark-300 p-4 hover:bg-purple-900;
+  @apply drop-shadow-xl;
 
 }
 
 .website{
-  @apply w-[50%] h-auto rounded-md absolute top-[15vh] left-[10%] -z-10;
+  @apply w-full h-auto rounded-md -z-10;
 }
 
 .name{
@@ -38,5 +38,24 @@ code {
 }
 
 .overview{
-  @apply w-[50%] h-auto relative left-[50%] top-[15vh];
+  @apply w-[50%] h-auto m-auto;
 }
+a{
+  color: white;
+  display: block;
+}
+
+/* setting the scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-900 rounded-full hover:bg-purple-800;
+}
+

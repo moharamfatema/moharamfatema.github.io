@@ -9,6 +9,7 @@ module.exports = {
             background: {
                 dark: '#0A0E1A',
                 darker: '#00030F',
+
             },
             purple:{
                 '100': '#F5F0FF',
@@ -20,7 +21,13 @@ module.exports = {
                 '700': '#6B46C1',
                 '800': '#553C9A',
                 '900': '#44337A',
-                
+
+            },
+            dark:{
+                '100': '#0A0E1A',
+                '200': '#00030F',
+                '300': '#1a2544',
+                '400': '#2a3c6e',
             },
             white: '#FFFFFF',
             black: '#000000',

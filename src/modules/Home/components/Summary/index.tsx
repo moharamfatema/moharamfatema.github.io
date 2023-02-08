@@ -3,9 +3,9 @@ import { contacts } from './contact'
 
 const Summary: FC = () => {
     return (
-        <div className='summary'>
+        <div className='summary '>
             <h1 className='name font-bold text-[64px] select-all'>Fatema Moharam</h1>
-            <div className="summary__content flex flex-col items-center gap-4">
+            <div className="summary__content flex flex-col items-center gap-4 pt-5">
                 <h2 className='title font-normal text-3xl'>SWE and ML Engineer</h2>
                 <div className="line w-full border-b-2 border-purple-600 h-0"></div>
                 <div className="summary__contact">

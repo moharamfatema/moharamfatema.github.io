@@ -2,11 +2,41 @@ import React,{FC} from 'react'
 import Summary from './components/Summary'
 
 const Home : FC= () => {
+
+    const [mouseX, setMouseX] = React.useState(0)
+    const [mouseY, setMouseY] = React.useState(0)
+    const [glowing, setGlowing] = React.useState('hidden')
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        setMouseX(e.clientX)
+        setMouseY(e.clientY)
+    }
+
     return (
-        <div className="home">
-            <div id="auta-thingy" className='w-5'></div>
-            <img src='https://cdn.midjourney.com/c8305050-2eb6-401e-93c9-3e239a958fad/grid_0.png' alt='website' className='website'/>
-            <div className="overview flex flex-col items-center px-9 justify-evenly gap-9">
+        <div className="home grid lg:grid-cols-2 gap-5 p-7 lg:p-20">
+            <div id="pic" onMouseMove={handleMouseMove} onMouseEnter={
+                () => {
+                    setGlowing('')
+                    document.querySelector('#root')?.classList.add('cursor-none')
+                }
+            }
+            onMouseLeave={
+                () => {
+                    setGlowing('hidden')
+                    document.querySelector('#root')?.classList.remove('cursor-none')
+                }
+            }>
+                <div className={'glowing '+glowing} id='glowing' style={
+                    {
+                        left : mouseX - 10,
+                        top  : mouseY - 15,
+                    }
+                }></div>
+                <img src='https://cdn.midjourney.com/c8305050-2eb6-401e-93c9-3e239a958fad/grid_0.png' alt='website' className='website'
+                />
+            </div>
+
+            <div className="overview flex flex-col items-center justify-evenly gap-9">
                 <Summary/>
                 <div className="resume btn max-w-xs flex items-center flex-col">
                     <a

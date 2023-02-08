@@ -1,5 +1,4 @@
 .App {
-  cursor: none;
   width: 100vw;
   height: 100vh;
 }
@@ -10,7 +9,7 @@
   @apply w-10 h-10 z-20 ;
   @apply bg-gradient-to-bl from-purple-600 to-purple-100 rounded-full;
   @apply shadow-lg shadow-purple-100;
-  position: absolute;
+  position: fixed;
   top: var(--mouse-y);
   left: var(--mouse-x);
 }
