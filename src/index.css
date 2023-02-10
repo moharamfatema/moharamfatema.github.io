@@ -18,28 +18,6 @@ code {
     monospace;
 }
 
-.resume.link{
-  @apply text-white;
-  @apply font-bold;
-}
-.resume.btn{
-  @apply rounded-xl;
-  @apply bg-dark-300 p-4 hover:bg-purple-900;
-  @apply drop-shadow-xl;
-
-}
-
-.website{
-  @apply w-full h-auto rounded-md -z-10;
-}
-
-.name{
-  @apply text-center w-11;
-}
-
-.overview{
-  @apply w-[50%] h-auto m-auto;
-}
 a{
   color: white;
   display: block;
@@ -59,3 +37,75 @@ a{
   @apply bg-purple-900 rounded-full hover:bg-purple-800;
 }
 
+.resume.link{
+  @apply text-white;
+  @apply font-bold;
+}
+.resume.btn{
+  @apply rounded-xl;
+  @apply bg-dark-300 p-4;
+  @apply drop-shadow-xl;
+
+}
+
+.website{
+  @apply w-full h-auto rounded-md -z-10;
+}
+
+.overview{
+  @apply w-[50%] h-auto m-auto;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+#pic-container {
+  position: relative;
+  @apply w-fit h-fit;
+}
+
+#hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+#glowing{
+  @apply w-10 h-10 ;
+  @apply bg-gradient-to-bl from-purple-600 to-purple-100 rounded-full;
+  position: absolute;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
+  opacity: 0;
+  /*make it glow*/
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  transition: opacity 0.5s ease;
+}
+#highlight{
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),transparent 0%, black 40%, black 100%), url('./assets/img/result.webp');
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.highlight{
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),rgba(255,255,255,0.1) 0%,transparent 100% );
+}
