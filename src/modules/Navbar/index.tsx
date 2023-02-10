@@ -12,8 +12,8 @@ const Navbar : React.FC = () => {
             hash: '#about'
         },
         {
-            name: 'Skills',
-            hash: '#skills'
+            name: 'Blog',
+            hash: '#blog'
         },
         {
             name: 'Projects',

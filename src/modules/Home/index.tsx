@@ -3,38 +3,55 @@ import Summary from './components/Summary'
 
 const Home : FC= () => {
 
-    const [mouseX, setMouseX] = React.useState(0)
-    const [mouseY, setMouseY] = React.useState(0)
-    const [glowing, setGlowing] = React.useState('hidden')
-
     const handleMouseMove = (e: React.MouseEvent) => {
-        setMouseX(e.clientX)
-        setMouseY(e.clientY)
+        const pic = document.querySelector('#pic') as HTMLElement
+        const glowing = document.querySelector('#glowing') as HTMLElement
+        const highlight = document.querySelector('.highlight') as HTMLElement
+        const mouseX = e.clientX - pic.getBoundingClientRect().left
+        const mouseY = e.clientY - pic.getBoundingClientRect().top
+
+        glowing.style.setProperty('--mouse-x', mouseX - 20 + 'px')
+        glowing.style.setProperty('--mouse-y', mouseY - 20 + 'px')
+        highlight.style.setProperty('--mouse-x', mouseX + 'px')
+        highlight.style.setProperty('--mouse-y', mouseY + 'px')
     }
 
     return (
         <div className="home grid lg:grid-cols-2 gap-5 p-7 lg:p-20">
-            <div id="pic" onMouseMove={handleMouseMove} onMouseEnter={
-                () => {
-                    setGlowing('')
-                    document.querySelector('#root')?.classList.add('cursor-none')
-                }
-            }
-            onMouseLeave={
-                () => {
-                    setGlowing('hidden')
-                    document.querySelector('#root')?.classList.remove('cursor-none')
-                }
-            }>
-                <div className={'glowing '+glowing} id='glowing' style={
-                    {
-                        left : mouseX - 10,
-                        top  : mouseY - 15,
-                    }
-                }></div>
-                <img src='https://cdn.midjourney.com/c8305050-2eb6-401e-93c9-3e239a958fad/grid_0.png' alt='website' className='website'
-                />
+            <div className="pic-wrapper">
+                <div id="pic-container"
+                    onMouseMove={handleMouseMove}
+                >
+                    <img id="pic" src='https://cdn.midjourney.com/c8305050-2eb6-401e-93c9-3e239a958fad/grid_0.png' alt='website' className='website'
+                    />
+                    <div id="highlight" className='highlight'></div>
+                    <div className={'glowing'} id='glowing' ></div>
+                    <div id="hover"
+                        onMouseEnter={
+                            () => {
+                                const glowing = document.querySelector('#glowing') as HTMLElement
+                                const highlight = document.querySelector('#highlight') as HTMLElement
+                                glowing.style.setProperty('opacity', '1')
+                                highlight.style.setProperty('opacity', '0.9')
+                                const root = document.querySelector(':root') as HTMLElement
+                                root.style.setProperty('cursor', 'none')
+                            }
+                        }
+                        onMouseLeave={
+                            () => {
+                                const glowing = document.querySelector('#glowing') as HTMLElement
+                                const highlight = document.querySelector('#highlight') as HTMLElement
+                                glowing.style.setProperty('opacity', '0')
+                                highlight.style.setProperty('opacity', '0')
+                                const root = document.querySelector(':root') as HTMLElement
+                                root.style.setProperty('cursor', 'default')
+                            }
+                        }
+                    ></div>
+                </div>
+                <p className='hidden md:block'>Tip: over over this picture for some magic!</p>
             </div>
+
 
             <div className="overview flex flex-col items-center justify-evenly gap-9">
                 <Summary/>
