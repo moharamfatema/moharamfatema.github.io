@@ -34,7 +34,7 @@ module.exports = {
         },
         fontFamily: {
             sans: ['Open sans', 'sans-serif'],
-        }
+        },
     },
     plugins: [],
 }
