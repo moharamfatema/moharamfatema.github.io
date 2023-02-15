@@ -1,4 +1,4 @@
-import { IContact } from '../../../../shared/types/types'
+import { IContact } from '../types/types'
 
 export const contacts: IContact[] = [
     {

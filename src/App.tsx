@@ -1,16 +1,23 @@
 import React from 'react'
 
+import About from './modules/About'
+import Contacts from './modules/Contacts'
 import Home from './modules/Home'
 import Projects from './modules/Projects'
-// import Navbar from './modules/Navbar'
+import Navbar from './modules/Navbar'
 
 function App() {
     return (
-        <div className="App p-7 lg:p-20 grid grid-cols-1 gap-9" >
+        <div className="App" >
+            <Navbar/>
 
-            {/* <Navbar/> */}
-            <Home/>
-            <Projects/>
+            <div className="sections">
+                <Home/>
+                <About/>
+                <Projects/>
+                <Contacts/>
+            </div>
+
         </div>
     )
 }

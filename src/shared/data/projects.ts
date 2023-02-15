@@ -1,4 +1,4 @@
-import { IProject } from '../../shared/types/types'
+import { IProject } from '../types/types'
 import motiv from '../../assets/img/projects/Motiv..webp'
 import mmc from '../../assets/img/projects/mmc.webp'
 import pomodoro from '../../assets/img/projects/pomodoro.webp'

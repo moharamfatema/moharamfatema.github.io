@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from './components/Project'
-import { projects } from './projects'
+import { projects } from '../../shared/data/projects'
 const Projects = () => {
 
     // carousel
@@ -19,19 +19,14 @@ const Projects = () => {
         return null
     }
 
-    const onMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        e.currentTarget.style.setProperty('--mouse-x', e.clientX + 'px')
-        e.currentTarget.style.setProperty('--mouse-y', e.clientY + 'px')
-    }
-
     return (
-        <div className='projects w-full max-h-screen' id='projects'>
+        <div className='section-wrapper projects w-full min-h-screen' id='projects'>
             <a href='#projects' className='section'>
                 <p className='section-hash'
                 >#</p>
-                <h1 className='section-title'>Projects</h1>
+                <h1 className='section-title'>Featured Projects Gallery</h1>
             </a>
-            <div className='grid grid-cols-1 gap-4 mt-4'>
+            <div className='grid grid-cols-1 gap-4 mt-4 min-h-full'>
 
                 <div className='flex justify-center content-center items-center'>
                     <div className="slide-btn wrap"
@@ -44,7 +39,6 @@ const Projects = () => {
                         <button onClick={prevSlide} title='Previous Slide' id='prev-slide'>
                             <i className='fas fa-chevron-left'></i>
                         </button>
-                        <div className="highlight p-5 px-6" onMouseMove={onMouseMove}></div>
                     </div>
                     <Project project={projects[current]} />
 
@@ -58,7 +52,6 @@ const Projects = () => {
                         <button  onClick={nextSlide} title='Next Slide' id='next-slide'>
                             <i className='fas fa-chevron-right'></i>
                         </button>
-                        <div className="highlight p-5 px-6 " onMouseMove={onMouseMove}></div>
                     </div>
 
                 </div>

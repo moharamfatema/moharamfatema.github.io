@@ -8,20 +8,16 @@ const Navbar : React.FC = () => {
             hash: '#home'
         },
         {
-            name: 'About',
+            name: 'About Me',
             hash: '#about'
         },
         {
-            name: 'Blog',
-            hash: '#blog'
-        },
-        {
-            name: 'Projects',
+            name: 'Featured Projects',
             hash: '#projects'
         },
         {
-            name: 'Contact',
-            hash: '#contact'
+            name: 'Get in Touch',
+            hash: '#contacts'
         }
     ]
     const [active, setActive] = React.useState({
@@ -50,8 +46,8 @@ const Navbar : React.FC = () => {
                             {
                                 hashes.map((hash, index) => {
                                     return (
-                                        <li className="nav-item p-4 border-b-2 border-b-purple-600 hover:bg-background-dark w-full" key={index}>
-                                            <a href={hash.hash}>
+                                        <li className="nav-item border-b-2 border-b-purple-600 hover:bg-background-dark w-full h-full" key={index}>
+                                            <a href={hash.hash} className='p-4'>
                                                 {hash.name}
                                             </a>
                                         </li>

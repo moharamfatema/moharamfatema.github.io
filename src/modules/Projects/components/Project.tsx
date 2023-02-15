@@ -7,10 +7,10 @@ interface IProps {
 
 const Project:FC<IProps> = ({project}) => {
     return (
-        <div className=' w-full h-full'>
-            <div className='grid grid-cols-1 gap-4 p-7 bg-background-darker rounded-md m-4 text-center'>
+        <div className=' w-full '>
+            <div className='flex flex-col content-center justify-center align-middle gap-4 p-7 bg-background-darker rounded-md m-4 text-center h-full'>
                 <h1 className='text-xl md:text-3xl font-normal text-white'>{project.name}</h1>
-                <p className='text-sm md:text-base text-white text-justify md:text-center'>{project.description}</p>
+                <p className='text-sm md:text-base text-white md:text-justify md:text-center'>{project.description}</p>
                 <div className='flex m-auto'>
                     <a href={project.repo} target='_blank' rel='noreferrer' className='project-link '>
                         <i className='fab fa-github mr-2 '></i>
