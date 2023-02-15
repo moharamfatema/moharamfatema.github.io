@@ -10,7 +10,7 @@ export const contacts: IContact[] = [
     {
         title: 'Fatema Moharam',
         icon: 'fa-brands fa-linkedin',
-        link: 'https://www.linkedin.com/in/fatema-moharam-461830213/',
+        link: 'https://www.linkedin.com/in/moharamfatema/',
     },
     {
         title: 'fatemamoharam',
