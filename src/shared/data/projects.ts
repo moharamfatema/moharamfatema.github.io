@@ -9,6 +9,7 @@ import quote from '../../assets/img/projects/quote.webp'
 import calculator from '../../assets/img/projects/calc.webp'
 import md from '../../assets/img/projects/mdprev.webp'
 import food from '../../assets/img/projects/food.webp'
+import todo from '../../assets/img/projects/todo.webp'
 
 export const projects:IProject [] = [
     {
@@ -100,5 +101,14 @@ export const projects:IProject [] = [
         link: 'https://moharamfatema.github.io/markdown-previewer-react/',
         tags: ['React', 'vanilla-css', 'gh-pages'],
         image: md,
+    },
+    {
+        id: 11,
+        name: 'Todo List',
+        description: 'Todo List is a web application that allows users to create, read, update, and delete tasks.',
+        repo: 'https://github.com/moharamfatema/todo-list-js',
+        link: 'https://moharamfatema.github.io/todo-list-js/',
+        tags: ['vanilla-js', 'vanilla-css', 'gh-pages', 'localstorage'],
+        image: todo,
     }
 ]
