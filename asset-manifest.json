@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b67824c.css",
-    "main.js": "/static/js/main.0f48df71.js",
+    "main.css": "/static/css/main.0e6674e7.css",
+    "main.js": "/static/js/main.b2c834b5.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/result.webp": "/static/media/result.edc678db095222cf69dc.webp",
     "static/media/blog.webp": "/static/media/blog.a12a4be84d6ca5b2e739.webp",
     "static/media/food.webp": "/static/media/food.f5c46d3a27c167daaa48.webp",
     "static/media/mdprev.webp": "/static/media/mdprev.ad1cd5a92e3a9c39b264.webp",
+    "static/media/todo.webp": "/static/media/todo.3822cee6da4f9a701bbc.webp",
     "static/media/Motiv..webp": "/static/media/Motiv..2f34a203cf37f6a742b7.webp",
     "static/media/mmc.webp": "/static/media/mmc.3b46951beb951059a0fc.webp",
     "static/media/calc.webp": "/static/media/calc.68db282da368e187d194.webp",
@@ -15,12 +16,12 @@
     "static/media/piano.webp": "/static/media/piano.23909ba49dadae21162c.webp",
     "static/media/quote.webp": "/static/media/quote.cdd1831efd2741d679ab.webp",
     "index.html": "/index.html",
-    "main.1b67824c.css.map": "/static/css/main.1b67824c.css.map",
-    "main.0f48df71.js.map": "/static/js/main.0f48df71.js.map",
+    "main.0e6674e7.css.map": "/static/css/main.0e6674e7.css.map",
+    "main.b2c834b5.js.map": "/static/js/main.b2c834b5.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b67824c.css",
-    "static/js/main.0f48df71.js"
+    "static/css/main.0e6674e7.css",
+    "static/js/main.b2c834b5.js"
   ]
 }
