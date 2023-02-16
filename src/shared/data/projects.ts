@@ -8,6 +8,7 @@ import piano from '../../assets/img/projects/piano.webp'
 import quote from '../../assets/img/projects/quote.webp'
 import calculator from '../../assets/img/projects/calc.webp'
 import md from '../../assets/img/projects/mdprev.webp'
+import food from '../../assets/img/projects/food.webp'
 
 export const projects:IProject [] = [
     {
@@ -45,6 +46,15 @@ export const projects:IProject [] = [
         tags: ['Ruby on Rails', 'UI/UX', 'Sqlite', 'PostgreSQL', 'Bootstrap'],
         image: blog,
         link: '',
+    },
+    {
+        id: 10,
+        name: 'Green Food',
+        description: 'Green Food is a web application that allows users to browse through healthy recipes from all over the world and view all the information about the recipe.',
+        repo: 'https://github.com/moharamfatema/green-food',
+        tags: ['React', 'Bootstracp', 'gh-pages'],
+        image: food,
+        link: 'https://moharamfatema.github.io/green-food/',
     },
     {
         id: 5,
