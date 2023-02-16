@@ -29,9 +29,9 @@ const Project:FC<IProps> = ({project}) => {
                 {/* tags */}
                 <div className="tags_wrapper flex gap-3 justify-center  content-center m-auto">
                     <h2 className='text-xs md:text-base font-medium text-white mt-2'>Tags: </h2>
-                    <div className='tags flex flex-wrap m-auto gap-2'>
+                    <div className='tags'>
                         {project.tags.map((tag) => (
-                            <span className='tag text-xs md:text-base bg-background-dark text-white p-2 md:px-4 md:py-2 rounded-full' key={tag}>{tag}</span>
+                            <span className='tag ' key={tag}>{tag}</span>
                         ))}
                     </div>
                 </div>

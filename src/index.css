@@ -18,8 +18,12 @@ code {
     monospace;
 }
 
+.navbar a, #contacts a{
+  @apply block;
+}
+
 a{
-  @apply text-white block;
+  @apply text-white;
 }
 
 /* setting the scrollbar style */
@@ -116,4 +120,22 @@ a{
 }
 .sections{
   @apply p-11 lg:p-20 grid grid-cols-1 gap-24;
+}
+.subsection-title{
+  @apply text-2xl font-medium py-2 text-white mt-4;
+}
+.subsection p, .subsection span{
+  @apply text-justify;
+}
+.exp-link{
+  @apply font-medium text-purple-400;
+}
+.tags{
+  @apply flex flex-wrap m-auto gap-2;
+}
+.tag{
+  @apply text-xs md:text-base bg-background-dark text-white p-2 md:px-4 md:py-2 rounded-full;
+}
+.skill.tag{
+  @apply bg-purple-900 bg-opacity-10 hover:bg-purple-700;
 }

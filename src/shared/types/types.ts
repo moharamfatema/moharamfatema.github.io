@@ -12,3 +12,7 @@ export interface IProject {
     tags: string[];
     repo: string;
 }
+export interface ISkill {
+    skill:string
+    link:string
+};
