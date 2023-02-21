@@ -5,6 +5,7 @@ import Contacts from './modules/Contacts'
 import Home from './modules/Home'
 import Projects from './modules/Projects'
 import Navbar from './modules/Navbar'
+import Feed from './modules/feed'
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
 
             <div className="sections">
                 <Home/>
+                <Feed/>
                 <About/>
                 <Projects/>
                 <Contacts/>
