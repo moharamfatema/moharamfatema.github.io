@@ -14,7 +14,7 @@ function App() {
 
             <div className="sections">
                 <Home/>
-                <Feed/>
+                {/* <Feed/> */}
                 <About/>
                 <Projects/>
                 <Contacts/>
