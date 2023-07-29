@@ -122,7 +122,7 @@ a{
   @apply p-11 lg:p-20 grid grid-cols-1 gap-24;
 }
 .subsection-title{
-  @apply text-2xl font-medium py-2 text-white mt-4;
+  @apply text-lg md:text-2xl font-medium py-2 text-white mt-4;
 }
 .subsection p, .subsection span{
   @apply text-justify;
@@ -138,4 +138,11 @@ a{
 }
 .skill.tag{
   @apply bg-purple-900 bg-opacity-10 hover:bg-purple-700;
+}
+
+.feed-description{
+  @apply overflow-hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }

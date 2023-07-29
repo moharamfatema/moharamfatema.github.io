@@ -12,6 +12,10 @@ const Navbar : React.FC = () => {
             hash: '#about'
         },
         {
+            name: 'The Wizarding Web',
+            hash: '#feed'
+        },
+        {
             name: 'Featured Projects',
             hash: '#projects'
         },
@@ -27,9 +31,9 @@ const Navbar : React.FC = () => {
 
     return (
         <div>
-            <nav className="navbar bg-background-darker w-[100vw] shadow-md shadow-black" id="mainNav">
+            <nav className="navbar bg-background-darker w-[100vw] shadow-lg shadow-black" id="mainNav">
                 <div className="">
-                    <button className="navbar-toggler navbar-toggler-right p-2 md:hidden text-center w-full" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={
+                    <button className="navbar-toggler navbar-toggler-right p-2 lg:hidden text-center w-full" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" onClick={
                         () => {
                             setActive({
                                 show: active.show === 'hidden' ? '' : 'hidden',
@@ -41,8 +45,8 @@ const Navbar : React.FC = () => {
                     </button>
                     <div className="navbar-line w-full border-b-2 border-b-purple-600">
                     </div>
-                    <div className={'navbar-collapse bg-background-darker w-full text-center md:block'+active.show} id="navbarResponsive">
-                        <ul className={'navbar-nav uppercase ml-auto md:flex '+active.show}>
+                    <div className={'navbar-collapse bg-background-darker w-full text-center lg:block'+active.show} id="navbarResponsive">
+                        <ul className={'navbar-nav uppercase ml-auto lg:flex '+active.show}>
                             {
                                 hashes.map((hash, index) => {
                                     return (
