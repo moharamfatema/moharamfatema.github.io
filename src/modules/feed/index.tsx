@@ -11,8 +11,8 @@ interface IFeedItem {
 
 const Feed = () => {
     const url = 'https://wizardingweb.hashnode.dev/rss.xml'
-    // const proxy = 'https://cors-anywhere.herokuapp.com/'
-    const proxy = 'http://localhost:5000/'
+    const proxy = 'https://portfolio-cors-f1bfc9d1a608.herokuapp.com/'
+    // const proxy = 'http://localhost:5000/'
     const [feed, setFeed] = useState<IFeedItem[]>([])
 
     const parser = new XMLParser({
