@@ -124,7 +124,7 @@ a{
   @apply text-lg md:text-2xl font-medium py-2 text-white mt-4;
 }
 .subsection p, .subsection span{
-  @apply text-justify;
+  @apply text-balance;
 }
 .exp-link{
   @apply font-medium text-purple-400;
@@ -133,10 +133,10 @@ a{
   @apply flex flex-wrap m-auto gap-2;
 }
 .tag{
-  @apply text-xs md:text-base bg-background-dark text-white p-2 md:px-4 md:py-2 rounded-full;
+  @apply text-xs md:text-base bg-background-dark text-white p-2 md:px-4 md:py-3 rounded-full flex flex-col justify-center;
 }
 .skill.tag{
-  @apply bg-purple-900 bg-opacity-10 hover:bg-purple-700;
+  @apply bg-purple-900 bg-opacity-40 hover:bg-purple-700;
 }
 
 .feed-description{

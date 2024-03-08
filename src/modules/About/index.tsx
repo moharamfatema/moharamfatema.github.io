@@ -50,9 +50,9 @@ const About = () => {
                 <div className="subsection skills md:col-span-2">
                     <h2 className='subsection-title'>Skills</h2>
                     <div className="skills-wrapper tags">
-                        {skills.map(({skill,link}) => (
-                            <a className="skill tag bg-purple-900" key={skill} href={link} target='_blank' rel='noreferrer noopener'>
-                                {skill}
+                        {skills.map(({skill,link, logo}) => (
+                            <a key={skill} href={link} target='_blank' rel='noreferrer noopener' className='skill tag'>
+                                {logo ? <img  src={logo} alt={skill} className='skill-logo h-5 md:h-10'/> : <p className="">{skill}</p>}
                             </a>
                         ))}
                     </div>

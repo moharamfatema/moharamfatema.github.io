@@ -15,4 +15,5 @@ export interface IProject {
 export interface ISkill {
     skill:string
     link:string
+    logo?:string
 };
