@@ -84,7 +84,6 @@ a{
   @apply opacity-0 transition-opacity duration-500 ease-in-out;
   border-radius: inherit;
   background: radial-gradient(circle at var(--mouse-x) var(--mouse-y),transparent 0%, black 40%, black 100%);
-   /* url('./assets/img/result.webp'); */
 }
 
 .highlight{
@@ -145,4 +144,14 @@ a{
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.alice-carousel__prev-btn-item, .alice-carousel__next-btn-item{
+  @apply mt-1 p-2 px-[14px] md:p-4 md:px-[22px] rounded-full bg-purple-900 !important;
+  @apply hover:bg-purple-700;
+
+}
+
+.alice-carousel__prev-btn-item span::after, .alice-carousel__next-btn-item span::after{
+  @apply text-white font-bold;
 }

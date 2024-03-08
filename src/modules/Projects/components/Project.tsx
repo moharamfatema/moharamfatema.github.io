@@ -8,7 +8,7 @@ interface IProps {
 const Project:FC<IProps> = ({project}) => {
     return (
         <div className=' w-full '>
-            <div className='flex flex-col content-center justify-center align-middle gap-4 p-7 bg-background-darker rounded-md m-4 text-center h-full'>
+            <div className='flex flex-col content-center justify-center align-middle gap-4 p-7 bg-background-darker rounded-md md:m-4 text-center h-full'>
                 <h1 className='text-xl md:text-3xl font-normal text-white'>{project.name}</h1>
                 <p className='text-sm md:text-base text-white m-auto md:text-justify text-center'>{project.description}</p>
                 <div className='flex m-auto'>
